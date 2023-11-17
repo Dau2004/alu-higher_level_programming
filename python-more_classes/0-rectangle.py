@@ -4,7 +4,5 @@
 
 class Rectangle:
     """ class is defineed"""
-
-
     pass
 """pass hold to prevent error"""
