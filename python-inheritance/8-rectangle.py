@@ -1,16 +1,36 @@
 #!/usr/bin/python3
-'''New class rectangle inherits from BaseGeometry
-'''
+"""
+Module 8-rectangle
+"""
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    '''New Rectangle class inherits from BaseGeometry, and represents a
-    rectangle'''
+    """
+    Rectangle class that inherits from BaseGeometry
+    """
+
     def __init__(self, width, height):
-        '''Initializes new Rectangle obj
-        '''
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
+        """
+        Initializes a Rectangle instance.
+
+        Parameters:
+            - width (int): The width of the rectangle.
+            - height (int): The height of the rectangle.
+        """
+        super().__init__()
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+    def __str__(self):
+        """
+        Returns a string representation of the rectangle.
+
+        Returns:
+            str: A string representation of the rectangle.
+        """
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
