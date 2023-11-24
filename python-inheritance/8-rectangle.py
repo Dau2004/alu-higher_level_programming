@@ -1,36 +1,17 @@
 #!/usr/bin/python3
-"""
-Module 8-rectangle
-"""
+Rectangle = __import__('8-rectangle').Rectangle
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+r = Rectangle(3, 5)
 
+print(r)
+print(dir(r))
 
-class Rectangle(BaseGeometry):
-    """
-    Rectangle class that inherits from BaseGeometry
-    """
+try:
+    print("Rectangle: {} - {}".format(r.width, r.height))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
 
-    def __init__(self, width, height):
-        """
-        Initializes a Rectangle instance.
-
-        Parameters:
-            - width (int): The width of the rectangle.
-            - height (int): The height of the rectangle.
-        """
-        super().__init__()
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def __str__(self):
-        """
-        Returns a string representation of the rectangle.
-
-        Returns:
-            str: A string representation of the rectangle.
-        """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
-
+try:
+    r2 = Rectangle(4, True)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
