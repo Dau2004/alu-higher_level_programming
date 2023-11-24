@@ -1,7 +1,17 @@
 #!/usr/bin/python3
-"""Defines a Python class-to-JSON function."""
+Rectangle = __import__('8-rectangle').Rectangle
 
+r = Rectangle(3, 5)
 
-def class_to_json(obj):
-    """Return the dictionary represntation of a simple data structure."""
-    return obj.__dict__
+print(r)
+print(dir(r))
+
+try:
+    print("Rectangle: {} - {}".format(r.width, r.height))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r2 = Rectangle(4, True)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
