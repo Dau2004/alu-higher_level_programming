@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+'''This file creates a my class list '''
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+
+class MyList(list):
+    '''This Class inherits the built in function list'''
+
+    def print_sorted(self):
+        '''Prints the list made in a sorted order  '''
+        sorted_list = self[:]
+        sorted_list.sort()
+        print("{}".format(sorted_list))
