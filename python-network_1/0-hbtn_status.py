@@ -1,5 +1,5 @@
-
-cumented"""
+#!/usr/bin/python3
+"""Documented"""
 import urllib.request
 
 url = 'https://intranet.hbtn.io/status'
